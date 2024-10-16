@@ -1,0 +1,10 @@
+---
+- name: Copy File to /tmp
+  hosts: deb12
+  become: yes  # Use this if you need elevated privileges
+  become_user: ansible
+  tasks:
+    - name: Copy file to /tmp
+      copy:
+        src: /home/ansible/ansible/file/test_file.txt  # Replace with the actual source file path
+        dest: /tmp/file.txt  # The destination path on the remote host
