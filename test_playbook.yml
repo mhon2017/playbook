@@ -1,0 +1,13 @@
+---
+- name: Test Playbook
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Create a test file
+      file:
+        path: /tmp/test_file.txt
+        state: touch
+
+    - name: Print a confirmation message
+      debug:
+        msg: "The test playbook has executed successfully."
